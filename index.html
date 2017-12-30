@@ -1,0 +1,89 @@
+<!doctype html>
+
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <title>Звёздный</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./dist/player.css">
+
+    <style>
+html, body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  font-size: 16px;
+  background-image: url(assets/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.wrapper {
+  /*position: relative;
+  min-height: 100%;*/
+  position: absolute;
+  top: 70%;
+  left: 60%;
+  height: 30%;
+  width: 50%;
+  margin: -15% 0 0 -25%;
+}
+/*.header {
+  padding: 20px;
+  background: #005500;
+  background-image: url(assets/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 40px;
+  color: white;
+  text-align: center;
+}*/
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  /*background: #efe;*/
+  /*background-image: url(assets/bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;*/
+  opacity: 0.3;
+  text-align: center;
+}
+.footer a { color: #e1e3ee; font-size: larger; }
+.container {
+  /*padding: 20px 0px 82px 0px;*/
+  position: relative;
+}
+.container p { color: #fff; }
+    </style>
+
+    <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="./dist/soundmanager2.js"></script>
+    <script src="./dist/player.js"></script>
+
+    <script>
+      soundManager.setup({ url: './dist/' });
+      $(document).ready(function() {
+        $('#player').player('./dist/Zvyozdnyj.mp3');
+      });
+    </script>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <!--<div class="header">Simple Audio Player</div>-->
+
+      <div class="container">
+        <p><i>unknown/combinare - Звёздный</i></p>
+        <div id="player" class="player"></div>
+      </div>
+
+    </div>
+    <div class='footer'>
+        <a href="http://dsperansky.info">Что за музыка?</a>
+      </div>
+  </body>
+</html>
